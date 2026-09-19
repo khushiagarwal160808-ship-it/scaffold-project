@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SnapVault - Visual Search Engine</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- 1. Header with custom branding -->
+  <header class="app-header">
+    <h1>SnapVault</h1>
+    <p class="tagline">Explore millions of open-source images instantly.</p>
+  </header>
+
+  <main class="container">
+    <!-- 2. Search Control wrapped in a Form -->
+    <form id="search-form" class="search-form">
+      <label for="search-input" class="sr-only">Search images</label>
+      <input 
+        id="search-input" 
+        type="search" 
+        placeholder="Try 'mountains', 'neon', or 'art'..." 
+        required 
+      />
+      <button id="search-btn" type="submit">Search</button>
+      
+      <!-- Original Feature 1: Clear Control Button -->
+      <button id="clear-btn" type="reset">Clear</button>
+    </form>
+
+    <!-- Original Feature 2: Quick-pick Suggestion Chips -->
+    <div class="category-chips">
+      <span class="chip">Nature</span>
+      <span class="chip">Architecture</span>
+      <span class="chip">Animals</span>
+      <span class="chip">Technology</span>
+    </div>
+
+    <!-- Original Feature 3: Empty-state Message -->
+    <p id="empty-state" class="empty-state-message">
+      Type a keyword above and click Search to explore images!
+    </p>
+
+    <!-- 3. Empty Results Grid Target (No <img> tags inside!) -->
+    <section id="results" class="image-grid"></section>
+  </main>
+
+  <!-- Script linked right before closing body tag -->
+  <script src="script.js"></script>
+</body>
+</html>
